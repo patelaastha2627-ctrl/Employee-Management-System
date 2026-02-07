@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Employee Management System</h1>
+
+    <form id="employeeForm" class="form-card">
+      <h2 id="formTitle">Add Employee</h2>
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Full name" />
+        <span id="errorName" class="error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="email@example.com" />
+        <span id="errorEmail" class="error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Street, City, State"></textarea>
+        <span id="errorAddress" class="error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="text" name="phone" placeholder="e.g. 123-456-7890" />
+        <span id="errorPhone" class="error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <span class="label">Gender</span>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="gender" value="Male" /> Male
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="gender" value="Female" /> Female
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="gender" value="Other" /> Other
+          </label>
+        </div>
+        <span id="errorGender" class="error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <span class="label">Hobbies</span>
+        <div class="checkbox-group" id="hobbiesGroup">
+          <label class="checkbox-label"><input type="checkbox" name="hobby" value="Reading" /> Reading</label>
+          <label class="checkbox-label"><input type="checkbox" name="hobby" value="Sports" /> Sports</label>
+          <label class="checkbox-label"><input type="checkbox" name="hobby" value="Music" /> Music</label>
+          <label class="checkbox-label"><input type="checkbox" name="hobby" value="Travel" /> Travel</label>
+          <label class="checkbox-label"><input type="checkbox" name="hobby" value="Gaming" /> Gaming</label>
+        </div>
+        <span id="errorHobbies" class="error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label for="designation">Designation</label>
+        <select id="designation" name="designation">
+          <option value="">Select designation</option>
+          <option value="Software Engineer">Software Engineer</option>
+          <option value="Senior Developer">Senior Developer</option>
+          <option value="Project Manager">Project Manager</option>
+          <option value="HR Manager">HR Manager</option>
+          <option value="Designer">Designer</option>
+          <option value="Analyst">Analyst</option>
+        </select>
+        <span id="errorDesignation" class="error" aria-live="polite"></span>
+      </div>
+
+      <div class="actions">
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <section class="table-section">
+      <h2>Employees</h2>
+      <p id="emptyMessage" class="empty">No employees yet. Add one using the form above.</p>
+      <table id="employeeTable" class="data-table" hidden>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Hobbies</th>
+            <th>Designation</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
