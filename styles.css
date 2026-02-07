@@ -1,4 +1,4 @@
-/* Employee Management System - Layout & Styles */
+
 
 .container {
   max-width: 900px;
@@ -78,7 +78,7 @@ h2 {
   margin-top: 0.25rem;
 }
 
-/* Radio & checkbox groups */
+
 .radio-group,
 .checkbox-group {
   display: flex;
